@@ -11,13 +11,15 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-blue-800">
+        {/* Logo */}
+        <Link href="/" className="text-2xl font-bold text-indigo-900">
           TunaCRM
         </Link>
 
+        {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-blue-800 focus:outline-none"
+          className="md:hidden text-indigo-900 focus:outline-none"
         >
           <svg
             className="w-6 h-6"
@@ -35,48 +37,59 @@ export default function Navbar() {
           </svg>
         </button>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
-          <Link href="/features" className="text-blue-800 hover:text-blue-600">
+          <Link
+            href="/features"
+            className="text-indigo-900 hover:text-purple-600 transition duration-300"
+          >
             Features
           </Link>
-          <Link href="/pricing" className="text-blue-800 hover:text-blue-600">
+          <Link
+            href="/pricing"
+            className="text-indigo-900 hover:text-purple-600 transition duration-300"
+          >
             Pricing
           </Link>
-          <Link href="/contact" className="text-blue-800 hover:text-blue-600">
+          <Link
+            href="/contact"
+            className="text-indigo-900 hover:text-purple-600 transition duration-300"
+          >
             Contact
           </Link>
           <Link
             href="/auth/login"
-            className="bg-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+            className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-500 transition duration-300 transform hover:scale-105 shadow-lg"
           >
             Login
           </Link>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white px-6 py-4">
           <Link
             href="/features"
-            className="block text-blue-800 hover:text-blue-600 py-2"
+            className="block text-indigo-900 hover:text-purple-600 py-2 transition duration-300"
           >
             Features
           </Link>
           <Link
             href="/pricing"
-            className="block text-blue-800 hover:text-blue-600 py-2"
+            className="block text-indigo-900 hover:text-purple-600 py-2 transition duration-300"
           >
             Pricing
           </Link>
           <Link
             href="/contact"
-            className="block text-blue-800 hover:text-blue-600 py-2"
+            className="block text-indigo-900 hover:text-purple-600 py-2 transition duration-300"
           >
             Contact
           </Link>
           <Link
             href="/auth/login"
-            className="block bg-blue-800 text-white px-6 py-2 rounded-lg text-center hover:bg-blue-700 transition duration-300"
+            className="block bg-purple-600 text-white px-6 py-2 rounded-lg text-center hover:bg-purple-500 transition duration-300 transform hover:scale-105 shadow-lg"
           >
             Login
           </Link>

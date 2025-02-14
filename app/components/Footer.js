@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-12">
+    <footer className="bg-gray-700 text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -115,7 +115,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-blue-800 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition duration-300"
+                className="bg-purple-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition duration-300"
               >
                 Subscribe
               </button>
