@@ -94,11 +94,11 @@ export default function Home() {
                   It's incredibly user-friendly and powerful!"
                 </p>
                 <div className="flex items-center">
-                  <img
+                  {/* <img
                     src="https://via.placeholder.com/50"
                     alt="User"
                     className="w-12 h-12 rounded-full mr-4"
-                  />
+                  /> */}
                   <div>
                     <p className="font-bold text-blue-800">John Doe</p>
                     <p className="text-sm text-gray-500">CEO, Acme Inc.</p>
