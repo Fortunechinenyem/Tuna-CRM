@@ -48,7 +48,7 @@ export default function Pricing() {
 
     const session = await response.json();
     if (session.url) {
-      window.location.href = session.url; // Redirect to Stripe Checkout
+      window.location.href = session.url;
     } else {
       alert("Failed to create checkout session.");
     }
