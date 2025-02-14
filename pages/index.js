@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <Layout>
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50">
+      <div className="bg-gradient-to-r from-blue-100 to-purple-100">
         <nav className="container mx-auto p-6 flex justify-between items-center">
           <div className="text-2xl font-bold text-blue-800">TunaCRM</div>
           <div className="space-x-6">
