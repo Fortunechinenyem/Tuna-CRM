@@ -33,7 +33,7 @@ export default function Signup() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 p-6">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-600 to-purple-300 p-6">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">
           Create an Account
@@ -117,7 +117,7 @@ export default function Signup() {
         <p className="text-sm text-gray-600 text-center mt-6">
           Already have an account?{" "}
           <Link
-            href="/login"
+            href="/auth/login"
             className="text-blue-600 font-medium hover:underline"
           >
             Log in

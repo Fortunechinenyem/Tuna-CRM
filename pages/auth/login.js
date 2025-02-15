@@ -27,7 +27,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 p-6">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-600 to-purple-300 p-6">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">
           Welcome Back
@@ -90,7 +90,7 @@ export default function Login() {
         <p className="text-sm text-gray-600 text-center mt-6">
           Don't have an account?{" "}
           <Link
-            href="/signup"
+            href="/auth/signup"
             className="text-blue-600 font-medium hover:underline"
           >
             Sign up

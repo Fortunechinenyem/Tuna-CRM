@@ -34,11 +34,11 @@ export default function Contact() {
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-indigo-900 mb-4 animate-fade-in-up">
+          <div className="text-center text-white bg-gradient-to-r from-indigo-900 to-purple-900 py-20 md:py-32 px-6 text-center mb-12">
+            <h1 className="text-4xl font-bold mb-4 animate-fade-in-up">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-600 animate-fade-in-up delay-100">
+            <p className="text-xl animate-fade-in-up delay-100">
               We'd love to hear from you! Reach out to us for any questions,
               feedback, or inquiries.
             </p>

@@ -74,11 +74,11 @@ export default function Pricing() {
     <Layout>
       <div className="py-20 px-6 bg-gradient-to-r from-gray-50 to-purple-50">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-indigo-900 mb-4 animate-fade-in-up">
+          <div className="text-center mb-16 bg-gradient-to-r from-indigo-900 to-purple-900 text-white py-20 md:py-32 px-6 text-center">
+            <h1 className="text-4xl font-bold  mb-4 animate-fade-in-up">
               Pricing Plans
             </h1>
-            <p className="text-xl text-gray-600 animate-fade-in-up delay-100">
+            <p className="text-xl  animate-fade-in-up delay-100">
               Choose the plan that fits your business needs and start growing
               today.
             </p>

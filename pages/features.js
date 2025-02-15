@@ -44,18 +44,16 @@ export default function Features() {
     <Layout>
       <div className="py-20 px-6 bg-gradient-to-r from-gray-50 to-purple-50">
         <div className="container mx-auto">
-          {/* Header Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-indigo-900 mb-4 animate-fade-in-up">
+          <div className="text-center bg-gradient-to-r from-indigo-900 to-purple-900 py-20 md:py-32 px-6 text-center text-white mb-16">
+            <h1 className="text-4xl font-bold  mb-4 animate-fade-in-up">
               Explore TunaCRM Features
             </h1>
-            <p className="text-xl text-gray-600 animate-fade-in-up delay-100">
+            <p className="text-xl  animate-fade-in-up delay-100">
               Discover the tools and features designed to streamline your
               workflow and grow your business.
             </p>
           </div>
 
-          {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <div className="w-64 bg-blue-800 text-white min-h-screen p-4">
+    <div className="w-64 bg-gradient-to-r from-indigo-900 to-purple-900 text-white min-h-screen p-4">
       <h2 className="text-2xl font-bold mb-6">TunaCRM</h2>
       <nav>
         <ul className="space-y-2">

@@ -1,33 +1,71 @@
 import { useState } from "react";
 import Link from "next/link";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Header() {
+  const { user, loading } = useAuth();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-md p-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold">TunaCRM</h1>
+      <Link
+        href="/"
+        className=" text-indigo-900 hover:text-purple-600 transition duration-300"
+      >
+        Back Home
+      </Link>
+
       <div className="relative">
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="flex items-center space-x-2 focus:outline-none"
         >
           <img
-            src="https://via.placeholder.com/40"
+            src={user?.photoURL || "https://via.placeholder.com/40"}
             alt="User"
-            className="rounded-full"
+            className="w-10 h-10 rounded-full border-2 border-purple-500"
           />
-          <span>John Doe</span>
+
+          <span className="text-gray-700 font-medium">
+            {user?.displayName || "User"}
+          </span>
+
+          <svg
+            className={`w-4 h-4 text-gray-700 transition-transform duration-200 ${
+              isDropdownOpen ? "transform rotate-180" : ""
+            }`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
         </button>
+
         {isDropdownOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
-            <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
+          <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 border border-gray-100">
+            <Link
+              href="/profile"
+              className="block px-4 py-2 text-gray-700 hover:bg-purple-50 transition duration-300"
+            >
               Profile
             </Link>
-            <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
+            <Link
+              href="/settings"
+              className="block px-4 py-2 text-gray-700 hover:bg-purple-50 transition duration-300"
+            >
               Settings
             </Link>
-            <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
+            <Link
+              href="/logout"
+              className="block px-4 py-2 text-gray-700 hover:bg-purple-50 transition duration-300"
+            >
               Logout
             </Link>
           </div>
