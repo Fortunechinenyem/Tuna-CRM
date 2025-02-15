@@ -1,3 +1,5 @@
+import { Logo } from "@/public/images";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -11,12 +13,10 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-indigo-900">
-          TunaCRM
+          <Image src={Logo} width={90} height={90} alt="Logo" priority />
         </Link>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
           className="md:hidden text-indigo-900 focus:outline-none"
@@ -37,7 +37,6 @@ export default function Navbar() {
           </svg>
         </button>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
           <Link
             href="/features"
