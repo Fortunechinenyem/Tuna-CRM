@@ -16,7 +16,7 @@ export default function Sidebar() {
           </li>
           <li>
             <Link
-              href="/contacts"
+              href="/customers"
               className="block py-2 px-4 hover:bg-blue-700 rounded-lg"
             >
               👥Customers
