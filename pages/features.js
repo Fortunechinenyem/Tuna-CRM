@@ -46,7 +46,7 @@ export default function Features() {
         <div className="container mx-auto">
           <div className="text-center bg-gradient-to-r from-indigo-900 to-purple-900 py-20 md:py-32 px-6 text-center text-white mb-16">
             <h1 className="text-4xl font-bold  mb-4 animate-fade-in-up">
-              Explore TunaCRM Features
+              Explore Our Features
             </h1>
             <p className="text-xl  animate-fade-in-up delay-100">
               Discover the tools and features designed to streamline your
