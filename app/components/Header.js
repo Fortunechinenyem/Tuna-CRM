@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Logo } from "@/public/images";
+import Image from "next/image";
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
 
@@ -8,11 +10,8 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-md p-4 flex justify-between items-center">
-      <Link
-        href="/"
-        className=" text-indigo-900 hover:text-purple-600 transition duration-300"
-      >
-        Back Home
+      <Link href="/" className="text-2xl font-bold ">
+        <Image src={Logo} width={90} height={90} alt="Logo" priority />
       </Link>
 
       <div className="relative">
@@ -49,26 +48,32 @@ export default function Header() {
         </button>
 
         {isDropdownOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 border border-gray-100">
-            <Link
-              href="/profile"
-              className="block px-4 py-2 text-gray-700 hover:bg-purple-50 transition duration-300"
-            >
-              Profile
-            </Link>
-            <Link
-              href="/settings"
-              className="block px-4 py-2 text-gray-700 hover:bg-purple-50 transition duration-300"
-            >
-              Settings
-            </Link>
-            <Link
-              href="/logout"
-              className="block px-4 py-2 text-gray-700 hover:bg-purple-50 transition duration-300"
-            >
-              Logout
-            </Link>
-          </div>
+          <>
+            <div
+              className="fixed inset-0 bg-black opacity-30 z-40"
+              onClick={() => setIsDropdownOpen(false)}
+            ></div>
+            <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 border border-gray-100 z-50">
+              <Link
+                href="/profile"
+                className="block px-4 py-2 text-gray-700 hover:bg-purple-50 transition duration-300"
+              >
+                Profile
+              </Link>
+              <Link
+                href="/settings"
+                className="block px-4 py-2 text-gray-700 hover:bg-purple-50 transition duration-300"
+              >
+                Settings
+              </Link>
+              <Link
+                href="/logout"
+                className="block px-4 py-2 text-gray-700 hover:bg-purple-50 transition duration-300"
+              >
+                Logout
+              </Link>
+            </div>
+          </>
         )}
       </div>
     </header>
