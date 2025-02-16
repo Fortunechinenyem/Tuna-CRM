@@ -9,7 +9,7 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md p-4 flex justify-between items-center">
+    <header className="bg-white shadow-md p-4 px-12 flex justify-between items-center">
       <Link href="/" className="text-2xl font-bold ">
         <Image src={Logo} width={90} height={90} alt="Logo" priority />
       </Link>
