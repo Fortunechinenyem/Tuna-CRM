@@ -22,7 +22,11 @@ export default function Sidebar() {
         <div className="sidebar">
           <Link href="/dashboard">Dashboard</Link>
           <Link href="/sales">Sales</Link>
-          {role === "admin" && <Link href="/admin">Manage Users</Link>}
+          {role === "admin" && (
+            <li>
+              <Link href="/admin">Manage Users</Link>
+            </li>
+          )}
         </div>
         <nav>
           <ul className="space-y-2">
