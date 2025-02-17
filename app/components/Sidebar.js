@@ -1,14 +1,29 @@
+import { useAuth } from "@/context/AuthContext";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getUserRole } from "@/lib/auth";
 
 export default function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { user } = useAuth();
+  const [role, setRole] = useState(null);
+
+  useEffect(() => {
+    if (user) {
+      getUserRole(user.uid).then(setRole);
+    }
+  }, [user]);
 
   return (
     <>
       <div
         className={`hidden md:block w-64 bg-gradient-to-r from-indigo-900 to-purple-900 text-white min-h-screen p-4`}
       >
+        <div className="sidebar">
+          <Link href="/dashboard">Dashboard</Link>
+          <Link href="/sales">Sales</Link>
+          {role === "admin" && <Link href="/admin">Manage Users</Link>}
+        </div>
         <nav>
           <ul className="space-y-2">
             <li>
