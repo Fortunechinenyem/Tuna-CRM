@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { db } from "@/lib/firebase";
 import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
 import withRole from "@/utils/withRole";
-import { Card, CardContent } from "@/components/ui/card";
+
 import {
   Table,
   TableBody,
@@ -10,7 +10,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/app/components/ui/table";
 // import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -18,7 +18,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/app/components/ui/select";
+import { Card, CardContent } from "@/app/components/ui/card";
 
 function ManageRoles() {
   const [users, setUsers] = useState([]);

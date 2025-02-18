@@ -1,7 +1,7 @@
+import { useEffect, useState } from "react";
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { getUserRole } from "@/lib/auth"; // Fetch role from Firestore
+import { getUserRole } from "@/lib/auth"; // ✅ Now properly imported
 
 export default function withRoleProtection(Component, allowedRoles) {
   return function ProtectedComponent(props) {
